@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-brand">Bana Jaber</div>
+        <ul class="nav-links">
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light theme">
+            <span class="theme-icon">🌙</span>
+        </button>
+        <button class="nav-hamburger" id="hamburger" aria-label="Open menu">&#9776;</button>
+    </nav>
+
+    <!-- Hero -->
+    <header id="about" class="hero">
+        <div class="hero-inner container">
+
+            <!-- Left: badge + name + description -->
+            <div class="hero-left">
+                <h1 class="hero-name">Bana Jaber</h1>
+                <p class="hero-desc">
+                    Junior software engineering student with a deep interest in machine learning and full-stack web development. 
+                    Currently engaged in deep learning research, alongside building side projects.
+                </p>
+                <a href="#projects" class="btn btn-cta">View My Work</a>
+            </div>
+
+            <!-- Right: photo -->
+            <div class="hero-image-wrap">
+                <img
+                    src="assets/images/animated_pic.png"
+                    alt="Bana Jaber"
+                    class="hero-img"
+                />
+            </div>
+
+        </div>
+    </header>
+
+    <!-- Projects -->
+    <section id="projects" class="section projects-section">
+        <div class="container">
+            <h2 class="section-title center">Projects</h2>
+            <div class="projects-grid">
+
+                <article class="project-card">
+                    <img
+                        src="assets/images/Soccer.png"
+                        alt="Soccer@KFUPM"
+                        class="project-img"
+                    />
+                    <div class="project-body">
+                        <h3 class="project-title">Soccer@KFUPM</h3>
+                        <p class="project-desc">
+                            Designed and developed in a team a full-stack
+tournament management system with a relational
+database. Supported features such as match result
+tracking, player statistics, and constraint enforcement
+across teams, players, and tournaments.
+
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Flask</span>
+                            <span class="tag">PostgreSQL</span>
+                            <span class="tag">Jinja2</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">HTML</span>
+                        </div>
+                        <div class="project-links">
+                            <a class="btn btn-outline">GitHub</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <img
+                        src="assets/images/sentiment.png"
+                        alt="Sentiment Analysis Model"
+                        class="project-img"
+                    />
+                    <div class="project-body">
+                        <h3 class="project-title">Sentiment Analysis Model</h3>
+                        <p class="project-desc">
+                            Developed in a team a sentiment classification model to
+categorize social media posts as positive, negative, or
+neutral. Applied data preprocessing, exploratory data
+analysis, and compared multiple classifiers including
+KNN, SVM, and a Deep Neural Network.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">NLP</span>
+                            <span class="tag">DNN</span>
+                            <span class="tag">SVM</span>
+                        </div>
+                        <div class="project-links">
+                            <a class="btn btn-outline">GitHub</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <img
+                        src="assets/images/TripMate.png"
+                        alt="TripMate"
+                        class="project-img"
+                    />
+                    <div class="project-body">
+                        <h3 class="project-title">TripMate</h3>
+                        <p class="project-desc">
+                            Currently developing in a team a travel planning website
+for cities across Saudi Arabia, enabling users to explore
+destinations, build day-by-day itineraries, and coordinate
+group trips
+
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">JavaScrip</span>
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">Nodejs</span>
+                            <span class="tag">React</span>
+                        </div>
+                        <div class="project-links">
+                            <a class="btn btn-outline">GitHub</a>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section contact-section">
+        <div class="container contact-grid">
+            <div class="contact-info">
+                <h2 class="section-title">Get In Touch</h2>
+                <p>Have a project in mind or just want to say hi? Fill in the form and I'll reach out to you soon.</p>
+                <ul class="contact-details">
+                    <li>📍 Riyadh, Saudi Arabia</li>
+                    <li>✉️ bana.ahmed.jaber@gmail.com</li>
+                    <li>🔗 <a href="https://www.linkedin.com/in/bana-jaber/" target="_blank" rel="noopener noreferrer">linkedin.com/in/bana-jaber</a></li>
+                </ul>
+            </div>
+            <form id="contactForm" class="contact-form" novalidate>
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Jane Doe" required />
+                    <span class="field-error" id="nameError"></span>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="jane@example.com" required />
+                    <span class="field-error" id="emailError"></span>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+                    <span class="field-error" id="messageError"></span>
+                </div>
+                <button type="submit" class="btn btn-primary" id="submitBtn">Send Message</button>
+                <p class="form-success" id="formSuccess" hidden>Thanks! Your message was sent successfully.</p>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="https://github.com/BanaJaber" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="https://www.linkedin.com/in/bana-jaber/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="mailto:bana.ahmed.jaber@gmail.com">Email</a>
+        </div>
+        <p>&copy; 2026 Bana Jaber. Made with ❤️.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
