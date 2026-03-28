@@ -179,7 +179,6 @@ Working on this project provided hands-on experience with:
 
 ### Benefits
 
-- **Zero dependencies**: No npm, no build step, no bundler — the project runs by simply opening `index.html` in a browser.
 - **Fast load time**: No framework overhead means minimal CSS and JS payload.
 - **Full control**: Every line of code is written and understood, making debugging and customization straightforward.
 - **Transferable skills**: The core concepts (Grid, custom properties, IntersectionObserver) apply directly to framework-based projects.
