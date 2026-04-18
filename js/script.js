@@ -111,19 +111,24 @@ function initContactForm() {
         btn.disabled = true;
         btn.textContent = 'Sending…';
 
-        // Simulate async send (no backend)
-        setTimeout(() => {
-            btn.textContent = 'Sent!';
-            success.hidden = false;
-            form.reset();
-            Object.values(fields).forEach(({ el }) => el.classList.remove('error'));
+        emailjs.sendForm('service_o761q1k', 'template_x5t2bio', form, 'DLNoSpFQw0MmBW7vf')
+            .then(() => {
+                btn.textContent = 'Sent!';
+                success.hidden = false;
+                form.reset();
+                Object.values(fields).forEach(({ el }) => el.classList.remove('error'));
 
-            setTimeout(() => {
+                setTimeout(() => {
+                    btn.disabled = false;
+                    btn.textContent = 'Send Message';
+                    success.hidden = true;
+                }, 4000);
+            })
+            .catch(() => {
                 btn.disabled = false;
                 btn.textContent = 'Send Message';
-                success.hidden = true;
-            }, 4000);
-        }, 1000);
+                alert('Something went wrong. Please try again or email me directly.');
+            });
     });
 }
 
@@ -171,6 +176,44 @@ function initNavScroll() {
 }
 
 /* ============================================================
+   8. Project category filter
+   ============================================================ */
+function initProjectFilter() {
+    const btns = document.querySelectorAll('.filter-btn');
+    const cards = document.querySelectorAll('.project-card');
+    if (!btns.length) return;
+
+    btns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            btns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            const filter = btn.dataset.filter;
+            cards.forEach(card => {
+                const match = filter === 'all' || card.dataset.category === filter;
+                card.classList.toggle('hidden', !match);
+            });
+        });
+    });
+}
+
+/* ============================================================
+   9. GitHub API — fetch TripMate repo link
+   ============================================================ */
+function initGitHubLink() {
+    const btn = document.getElementById('tripmate-github-btn');
+    if (!btn) return;
+
+    fetch('https://api.github.com/users/bana-jaber21/repos')
+        .then(res => res.json())
+        .then(repos => {
+            const repo = repos.find(r => r.name.toLowerCase().includes('tripmate'));
+            if (repo) btn.href = repo.html_url;
+        })
+        .catch(() => {});
+}
+
+/* ============================================================
    Init
    ============================================================ */
 document.addEventListener('DOMContentLoaded', () => {
@@ -181,4 +224,6 @@ document.addEventListener('DOMContentLoaded', () => {
     initContactForm();
     initScrollReveal();
     initNavScroll();
+    initProjectFilter();
+    initGitHubLink();
 });
