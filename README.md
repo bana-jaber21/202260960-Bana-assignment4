@@ -11,6 +11,36 @@ A personal portfolio website built with vanilla HTML, CSS, and JavaScript. It sh
 - Contact form with real email delivery via EmailJS
 - Scroll-reveal animations
 
+## Innovation
+
+The following creative features were added to make the portfolio stand out beyond the basics:
+
+### Typing Animation
+The hero section displays the name "Bana Jaber" typing out letter by letter on page load, with a blinking accent-colored cursor that disappears once the animation completes. This creates an immediate visual hook for visitors.
+
+### Scroll Progress Bar
+A thin accent-colored bar fixed at the very top of the page fills in width as the user scrolls down, providing a subtle but polished visual indicator of reading progress.
+
+### 3D Project Card Flip
+Hovering over any project card triggers a smooth 3D flip animation (CSS `rotateY` with `preserve-3d`). The front shows the project image, title, and description. The back reveals the full tech stack and GitHub link, encouraging visitors to interact with each card.
+
+### "In Progress" Badge
+The TripMate project card displays a small green badge labeled "In Progress" next to the title, communicating that the project is actively being developed without requiring any additional explanation.
+
+## Deployment
+
+The portfolio is deployed and publicly accessible via **Netlify**:
+
+🔗 **Live URL**: [https://bana-jaber21.netlify.app](https://bana-jaber21.netlify.app)
+
+### How it was deployed
+
+1. The project was pushed to GitHub at `github.com/bana-jaber21/202260960-Bana-assignment4`
+2. The GitHub repository was connected to Netlify via the Netlify dashboard
+3. Netlify automatically builds and redeploys the site on every push to the `main` branch
+
+No build tools or server configuration are required. The site runs entirely as a static frontend (HTML, CSS, JS) and is served by Netlify's CDN. Any future changes pushed to GitHub will be reflected on the live site automatically.
+
 ## Project Structure
 
 ```
