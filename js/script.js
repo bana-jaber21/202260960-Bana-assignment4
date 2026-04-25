@@ -73,6 +73,7 @@ function initContactForm() {
     const fields = {
         name:    { el: document.getElementById('name'),    error: document.getElementById('nameError') },
         email:   { el: document.getElementById('email'),   error: document.getElementById('emailError') },
+        subject: { el: document.getElementById('subject'), error: document.getElementById('subjectError') },
         message: { el: document.getElementById('message'), error: document.getElementById('messageError') },
     };
 
@@ -214,6 +215,36 @@ function initGitHubLink() {
 }
 
 /* ============================================================
+   10. Typing animation for hero name
+   ============================================================ */
+function initTypingAnimation() {
+    const el = document.getElementById('heroName');
+    if (!el) return;
+    const text = 'Bana Jaber';
+    let i = 0;
+    const interval = setInterval(() => {
+        el.textContent = text.slice(0, ++i);
+        if (i === text.length) {
+            clearInterval(interval);
+            el.classList.add('typed');
+        }
+    }, 80);
+}
+
+/* ============================================================
+   11. Scroll progress bar
+   ============================================================ */
+function initScrollProgress() {
+    const bar = document.getElementById('scrollProgress');
+    if (!bar) return;
+    window.addEventListener('scroll', () => {
+        const scrolled = window.scrollY;
+        const total = document.documentElement.scrollHeight - window.innerHeight;
+        bar.style.width = (scrolled / total * 100) + '%';
+    }, { passive: true });
+}
+
+/* ============================================================
    Init
    ============================================================ */
 document.addEventListener('DOMContentLoaded', () => {
@@ -226,4 +257,6 @@ document.addEventListener('DOMContentLoaded', () => {
     initNavScroll();
     initProjectFilter();
     initGitHubLink();
+    initTypingAnimation();
+    initScrollProgress();
 });

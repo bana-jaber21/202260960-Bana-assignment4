@@ -22,13 +22,16 @@
         <button class="nav-hamburger" id="hamburger" aria-label="Open menu">&#9776;</button>
     </nav>
 
+    <!-- Scroll progress bar -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
     <!-- Hero -->
     <header id="about" class="hero">
         <div class="hero-inner container">
 
             <!-- Left: badge + name + description -->
             <div class="hero-left">
-                <h1 class="hero-name">Bana Jaber</h1>
+                <h1 class="hero-name" id="heroName"></h1>
                 <p class="hero-desc">
                     Junior software engineering student with a deep interest in machine learning and full-stack web development. 
                     Currently engaged in deep learning research, alongside building side projects.
@@ -61,111 +64,106 @@
             <div class="projects-grid">
 
                 <article class="project-card" data-category="web">
-                    <img
-                        src="assets/images/Soccer.png"
-                        alt="Soccer@KFUPM"
-                        class="project-img"
-                    />
-                    <div class="project-body">
-                        <h3 class="project-title">Soccer@KFUPM</h3>
-                        <p class="project-desc">
-                            Designed and developed in a team a full-stack
-tournament management system with a relational
-database. Supported features such as match result
-tracking, player statistics, and constraint enforcement
-across teams, players, and tournaments.
-
-                        </p>
-                        <div class="project-tags">
-                            <span class="tag">Flask</span>
-                            <span class="tag">PostgreSQL</span>
-                            <span class="tag">Jinja2</span>
-                            <span class="tag">JavaScript</span>
-                            <span class="tag">CSS</span>
-                            <span class="tag">HTML</span>
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img src="assets/images/Soccer.png" alt="Soccer@KFUPM" class="project-img" />
+                            <div class="project-body">
+                                <h3 class="project-title">Soccer@KFUPM</h3>
+                                <p class="project-desc">Designed and developed in a team a full-stack tournament management system with a relational database. Supported features such as match result tracking, player statistics, and constraint enforcement across teams, players, and tournaments.</p>
+                            </div>
                         </div>
-                        <div class="project-links">
-                            <a class="btn btn-outline">GitHub</a>
+                        <div class="card-back">
+                            <h3 class="card-back-title">Soccer@KFUPM</h3>
+                            <p class="card-back-label">Tech Stack</p>
+                            <div class="project-tags">
+                                <span class="tag">Flask</span>
+                                <span class="tag">PostgreSQL</span>
+                                <span class="tag">Jinja2</span>
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">CSS</span>
+                                <span class="tag">HTML</span>
+                            </div>
+                            <div class="project-links">
+                                <a class="btn btn-outline">GitHub</a>
+                            </div>
                         </div>
                     </div>
                 </article>
 
                 <article class="project-card" data-category="ml">
-                    <img
-                        src="assets/images/sentiment.png"
-                        alt="Sentiment Analysis Model"
-                        class="project-img"
-                    />
-                    <div class="project-body">
-                        <h3 class="project-title">Sentiment Analysis Model</h3>
-                        <p class="project-desc">
-                            Developed in a team a sentiment classification model to
-categorize social media posts as positive, negative, or
-neutral. Applied data preprocessing, exploratory data
-analysis, and compared multiple classifiers including
-KNN, SVM, and a Deep Neural Network.
-                        </p>
-                        <div class="project-tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">NLP</span>
-                            <span class="tag">DNN</span>
-                            <span class="tag">SVM</span>
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img src="assets/images/sentiment.png" alt="Sentiment Analysis Model" class="project-img" />
+                            <div class="project-body">
+                                <h3 class="project-title">Sentiment Analysis Model</h3>
+                                <p class="project-desc">Developed in a team a sentiment classification model to categorize social media posts as positive, negative, or neutral. Applied data preprocessing, exploratory data analysis, and compared multiple classifiers including KNN, SVM, and a Deep Neural Network.</p>
+                            </div>
                         </div>
-                        <div class="project-links">
-                            <a class="btn btn-outline">GitHub</a>
+                        <div class="card-back">
+                            <h3 class="card-back-title">Sentiment Analysis Model</h3>
+                            <p class="card-back-label">Tech Stack</p>
+                            <div class="project-tags">
+                                <span class="tag">Python</span>
+                                <span class="tag">NLP</span>
+                                <span class="tag">DNN</span>
+                                <span class="tag">SVM</span>
+                            </div>
+                            <div class="project-links">
+                                <a class="btn btn-outline">GitHub</a>
+                            </div>
                         </div>
                     </div>
                 </article>
 
                 <article class="project-card" data-category="web">
-                    <img
-                        src="assets/images/TripMate.png"
-                        alt="TripMate"
-                        class="project-img"
-                    />
-                    <div class="project-body">
-                        <h3 class="project-title">TripMate</h3>
-                        <p class="project-desc">
-                            Currently developing in a team a travel planning website
-for cities across Saudi Arabia, enabling users to explore
-destinations, build day-by-day itineraries, and coordinate
-group trips
-
-                        </p>
-                        <div class="project-tags">
-                            <span class="tag">JavaScrip</span>
-                            <span class="tag">HTML</span>
-                            <span class="tag">CSS</span>
-                            <span class="tag">Nodejs</span>
-                            <span class="tag">React</span>
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img src="assets/images/TripMate.png" alt="TripMate" class="project-img" />
+                            <div class="project-body">
+                                <h3 class="project-title">TripMate <span class="in-progress-badge">In Progress</span></h3>
+                                <p class="project-desc">Currently developing in a team a travel planning website for cities across Saudi Arabia, enabling users to explore destinations, build day-by-day itineraries, and coordinate group trips.</p>
+                            </div>
                         </div>
-                        <div class="project-links">
-                            <a id="tripmate-github-btn" class="btn btn-outline" target="_blank" rel="noopener noreferrer">GitHub</a>
+                        <div class="card-back">
+                            <h3 class="card-back-title">TripMate</h3>
+                            <p class="card-back-label">Tech Stack</p>
+                            <div class="project-tags">
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">HTML</span>
+                                <span class="tag">CSS</span>
+                                <span class="tag">Node.js</span>
+                                <span class="tag">React</span>
+                            </div>
+                            <div class="project-links">
+                                <a id="tripmate-github-btn" class="btn btn-outline" target="_blank" rel="noopener noreferrer">GitHub</a>
+                            </div>
                         </div>
                     </div>
                 </article>
 
                 <article class="project-card" data-category="ml">
-                    <img
-                        src="assets/images/Laptop.png"
-                        alt="Laptop Price Prediction & Analysis screenshot"
-                        class="project-img"
-                    />
-                    <div class="project-body">
-                        <h3 class="project-title">Laptop Price Prediction & Analysis</h3>
-                        <p class="project-desc">
-                            Cleaned and analyzed laptop market data to identify pricing trends and feature relationships. Performed EDA and data visualization, then built a regression model to estimate laptop prices from hardware specifications.
-                        </p>
-                        <div class="project-tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">Pandas</span>
-                            <span class="tag">NumPy</span>
-                            <span class="tag">EDA</span>
-                            <span class="tag">Data Visualization</span>
-                            <span class="tag">Regression</span>
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img src="assets/images/Laptop.png" alt="Laptop Price Prediction & Analysis" class="project-img" />
+                            <div class="project-body">
+                                <h3 class="project-title">Laptop Price Prediction & Analysis</h3>
+                                <p class="project-desc">Cleaned and analyzed laptop market data to identify pricing trends and feature relationships. Performed EDA and data visualization, then built a regression model to estimate laptop prices from hardware specifications.</p>
+                            </div>
                         </div>
-                        <div class="project-links">
-                            <a class="btn btn-outline">GitHub</a>
+                        <div class="card-back">
+                            <h3 class="card-back-title">Laptop Price Prediction</h3>
+                            <p class="card-back-label">Tech Stack</p>
+                            <div class="project-tags">
+                                <span class="tag">Python</span>
+                                <span class="tag">Pandas</span>
+                                <span class="tag">NumPy</span>
+                                <span class="tag">EDA</span>
+                                <span class="tag">Data Visualization</span>
+                                <span class="tag">Regression</span>
+                            </div>
+                            <div class="project-links">
+                                <a class="btn btn-outline">GitHub</a>
+                            </div>
                         </div>
                     </div>
                 </article>
@@ -196,6 +194,11 @@ group trips
                     <label for="email">Email</label>
                     <input type="email" id="email" name="email" placeholder="jane@example.com" required />
                     <span class="field-error" id="emailError"></span>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" placeholder="What's this about?" required />
+                    <span class="field-error" id="subjectError"></span>
                 </div>
                 <div class="form-group">
                     <label for="message">Message</label>
